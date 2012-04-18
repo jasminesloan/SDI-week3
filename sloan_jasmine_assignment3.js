@@ -50,6 +50,59 @@ console.log("No room for anyone else at the " + april7th
 
 );
 
+// Boolean 
+
+var x = true
+var y = false
+var z = true
+
+if (x) { "Then all the guest will show up and the party will go on"
+};
+if (y) { "If no one shows up to the party we will go on"
+};
+if (z) { "The party will be huge success!"
+};
+
+// Given: (x ∧ y) ∨ z
+
+if ((x && y) || z) {
+    console.log("The expression is true");
+} else {
+    console.log("The expression is false");
+}
+
+console.log(x)
+console.log(y)
+
+console.log("If " + x + " the " + april7th + " will be a success!"
+
+);
+
+//Array
+
+var cases = 24
+var bottle = "24 shots" 
+var guests = ["Candyse", "Sasha", "Camille"];
+var drinks = ["Grey Goose", "Patron", "Ciroc"];
+
+
+var swimming = [
+	"will be swimming",
+	"doesn't want to get her hair wet",
+	"can not swim"
+];
+
+for (var i=0, b=guests.length; i < b; i++) {
+	console.log( "Guest " + guests[i] + " maybe " + swimming[i] );	
+};
+
+var example = ["", [], {}, function(){}, undefined, true, false, 0, 50];
+
+for ( var cases = 24; cases > 0; cases--) {
+	console.log(cases + " needed to supply the party. ");
+};
+
+console.log(" all out, in need of more cases. ");
 
 
 
@@ -71,7 +124,7 @@ console.log("No room for anyone else at the " + april7th
 
 // objects
 
-var Array = [true, false, "", [], function(){}, 101];
+ var Array = [true, false, "", [], function(){}, 101];
 
 var student = { 
 	id: "0001111", 
