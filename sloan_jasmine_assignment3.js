@@ -104,56 +104,128 @@ for ( var cases = 24; cases > 0; cases--) {
 
 console.log(" all out, in need of more cases. ");
 
+//Functions
+
+var bottle = "24 shots"
+var numberOfGuests = 8;
+
+var getBottles = function(b, name) {
+	var bottle = b * numberOfGuests / 2;
+	console.log(bottle + " bottles of " + name );
+};
+
+getBottles(3, "Grey Goose");
+getBottles(4, "Patron");
+getBottles(5, "Ciroc");
 
 
+// Argument
 
+var foodNames = [ "Wings", "Hot Dogs", "Hamburgers", "Rib Slab" ],
+	amountOfFood = [ 50, 20, 30, 5 ];
+var buyOneFood = function(foodName, amountThisFood) {
+var buyAllFood = function(foodNames, amountOfFood) {}; // buyAllFood	
+	
 
+console.log("Grocery shopping for " + foodName + " need "
+	+ amountThisFood + " to have enough");
 
+for (var amount = 0; amount < amountThisFood; amount += 5) {
+	var amountPurchased = amountThisFood - amount;
 
+	var foodName = foodNames[foodNumber]
+		amountThisFood = amountOfFood[foodNumber];
+	buyOneFood(foodName, amountThisFood);
+	
+	console.log(amount + " needed " + amountPurchased + " food!");
+}
+console.log("We have enough food for " + april7th + ".");
 
+};
+	
+for (var foodNumber = 0; foodNumber < foodNames.length; foodNumber++) {
+	buyOneFood(foodNumber);
 
+} // for foodNumber
 
+// functions return a value
+var timeOfParty = function(pm) {
+	var currentHour = (new Date()).getHours(), 
+		timeOfDay, timing;
+	if (timeOfParty < 12) {timeOfDay = "too early" };
+	if (timeOfParty < 6) {timeOfDay = "too late"; }
+	else {timeOfDay = "good timing"; }
+	timing = ("Not too early, not too late, " + timeOfDay + " , " + pm + "." );
+	//console.log(timing);
+	return timing; 
 
+};
 
+ var perferctTiming = timeOfParty("Hello, Welcome to the party! ");
+ console.log(perferctTiming);
 
+ var partyFavors = function(cashAllotted) {
+ 	var pricePerFavor = 12,
+ 		fullFavor;
+ 	if (cashAllotted < pricePerFavor){
+ 		console.log("Can't afford party favors.");
+ 		return 0;	
+ 	}
+ 	fullFavor = Math.floor(cashAllotted / pricePerFavor);
+ 	return FullFavor;	
+ };
 
+var purchasedFavors = partyFavors(10);
+console.log("Guests receive " + purchasedFavors + " party favors!");
 
+var partyFavors = function(cashAllotted) {
+ 	var pricePerFavor = 12,
+ 		fullFavor;
+ 	if (cashAllotted < pricePerFavor){
+ 		console.log("Can't afford party favors.");
+ 		fullFavor = 0;	
+ 	}
+ 	else {
+ 		fullFavor = Math.floor(cashAllotted / pricePerFavor);
+ }
+ 	return fullFavor;	
+ };
 
-
+var purchasedFavors = partyFavors(13);
+console.log("Guests appreciate " + purchasedFavors + " party favors, extremely excited!");
 
 
 // objects
 
  var Array = [true, false, "", [], function(){}, 101];
 
-var student = { 
-	id: "0001111", 
-	name: "Jasmine", 
-	interests: [
-		"JavaScript", 
-		"HTML", 
-		"CSS", 
-		"Flash"
+var wheather = { 
+	type: "warm", 
+	day: "Friday", 
+	timeOfDay: [
+		"morning", 
+		"afternoon", 
+		"night"
 	] 
 };
 
-var key = "interests";
+var key = "timeOfDay";
 
-student.name = "Bob";
+wheather.day = "Friday";
 
-console.log( student[key] );
-console.log( student.name );
-console.log( student.sayHi ); 
+console.log( wheather[key] );
+console.log( wheather.day );
+console.log( wheather.letsParty ); 
 
 
-student.sayHi = function () {
-	console.log("Get lost.")
+wheather.letsParty = function () {
+	console.log("Let the party begin!")
 };
 
-student["sayHi"]
+wheather["letsParty"]
 
-for (var key in student) {
-	console.log("key: " + key + ", value: ", student[key]);
+for (var key in wheather) {
+	console.log("key: " + key + ", value: ", wheather[key]);
 };
 
 
@@ -171,66 +243,7 @@ for (var key in student) {
 	</friends>
 	
 
-// JSON Data File
-	 
 
-var json ={
-	"friends": {
-		"001435235": {
-			"name": "Chris",
-			"age": 30 
-		},
-		"001435238": {
-		"name": "Scott",
-		"age": 42 
-		},
-		"001435230": {
-		"name": "Jason",
-		"age": 32
-		}
-	}	 
-};
-
-for (var key in json.friends) {
-	var friend = json.friends[key];
-	//friend.name
-};
-
-var json2 = {
-	"friends": [
-		{
-			"uuid": "001435235",
-			"name": "Chris",
-			"age": 30
-		},
-		{
-			"uuid": "001435238",
-			"name": "Scott",
-			"age": 42
-		},
-		{
-			"uuid": "001435230",
-			"name": "Jason",
-			"age": 32
-		},
-	]
-};
-
-var handleData = function (json){
-	for (var i = 0; i < json.friends.length; i++){
-		var friend = json.friends[i];
-		console.log("User ID: " + friend.uuid + ", Name: " + friend.name + ", Age: " + friend.age);
-	};
-};
-
-handleData(json2);
-
-// 
-var jsonstring = JSON.stringify(json);
-console.log(jsonstring);
-
-var receivedjson = JSON.parse(jsonstring);
-console.log(receivedjson);
 
 
 
