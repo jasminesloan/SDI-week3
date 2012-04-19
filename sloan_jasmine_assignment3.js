@@ -199,7 +199,7 @@ console.log("Guests appreciate " + purchasedFavors + " party favors, extremely e
 
  var Array = [true, false, "", [], function(){}, 101];
 
-var wheather = { 
+var weather = { 
 	type: "warm", 
 	day: "Friday", 
 	timeOfDay: [
@@ -211,36 +211,36 @@ var wheather = {
 
 var key = "timeOfDay";
 
-wheather.day = "Friday";
+weather.day = "Friday";
 
-console.log( wheather[key] );
-console.log( wheather.day );
-console.log( wheather.letsParty ); 
+console.log( weather[key] );
+console.log( weather.day );
+console.log( weather.letsParty ); 
 
 
-wheather.letsParty = function () {
+weather.letsParty = function () {
 	console.log("Let the party begin!")
 };
 
-wheather["letsParty"]
+weather["letsParty"]
 
-for (var key in wheather) {
-	console.log("key: " + key + ", value: ", wheather[key]);
+for (var key in weather) {
+	console.log("key: " + key + ", value: ", weather[key]);
 };
 
 
 // XML
 
-<friends>
-	<friend>
-		<UUID>0015692</UUID>
-		<name>Mike</name>
-	</friend>
-	<friend>
-		<UUID>0118245</UUID>
-		<name>Chris</name>
-	</friend>
-	</friends>
+<weather>
+	<weather>
+		<type>warm</type>
+		<day>Friday</day>
+	</weather>
+	<weather>
+		<type>cold</type>
+		<day>Saturday</day>
+	</weather>
+	</weather>
 	
 
 
